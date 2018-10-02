@@ -1,3 +1,4 @@
+# coding: utf-8
 # Copyright © Trainline Limited, 2016. All rights reserved. See LICENSE.txt in the project root for license information.
 require "json"
 
@@ -155,7 +156,7 @@ module JSON::Api::Vanilla
 
   # Convert a name String to a String that is a valid Ruby class name.
   def self.ruby_class_name(name)
-    name.scan(/[a-zA-Z_][a-zA-Z_0-9]+/).map(&:capitalize).join
+    'Json' + name.scan(/[a-zA-Z_][a-zA-Z_0-9]+/).map(&:capitalize).join
   end
 
   # Convert a name String to a String that is a valid snake-case Ruby
